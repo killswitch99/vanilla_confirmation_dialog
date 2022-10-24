@@ -53,40 +53,40 @@ class SimpleModal {
 	createModal() {
 		// Background dialog
 		this.modal = document.createElement('dialog')
-		this.modal.classList.add('thin-ui-modal-dialog')
+		this.modal.classList.add('modal-dialog')
 		this.modal.show()
 
 		// Message window
 		const window = document.createElement('div')
-		window.classList.add('thin-ui-modal-window')
+		window.classList.add('modal-window')
 		this.modal.appendChild(window)
 
 		// Main text
 		const text = document.createElement('div')
-		text.classList.add('thin-ui-modal-text')
+		text.classList.add('modal-text')
 		text.textContent = this.modalText
 		window.appendChild(text)
 
 		// Accept and cancel button group
 		const buttonGroup = document.createElement('div')
-		buttonGroup.classList.add('thin-ui-modal-button-group')
+		buttonGroup.classList.add('modal-button-group')
 		window.appendChild(buttonGroup)
 
 		// Cancel button
 		this.cancelButton = document.createElement('button')
 		this.cancelButton.type = 'button'
-		this.cancelButton.classList.add('thin-ui-button')
-		this.cancelButton.classList.add('thin-ui-button-secondary')
-		this.cancelButton.classList.add('thin-ui-button-regular')
+		this.cancelButton.classList.add('button')
+		this.cancelButton.classList.add('button-secondary')
+		this.cancelButton.classList.add('button-regular')
 		this.cancelButton.textContent = this.cancelText
 		buttonGroup.appendChild(this.cancelButton)
 
 		// Accept button
 		this.acceptButton = document.createElement('button')
 		this.acceptButton.type = 'button'
-		this.acceptButton.classList.add('thin-ui-button')
-		this.acceptButton.classList.add('thin-ui-button-primary')
-		this.acceptButton.classList.add('thin-ui-button-regular')
+		this.acceptButton.classList.add('button')
+		this.acceptButton.classList.add('button-primary')
+		this.acceptButton.classList.add('button-regular')
 		this.acceptButton.textContent = this.acceptText
 		buttonGroup.appendChild(this.acceptButton)
 
